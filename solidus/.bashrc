@@ -6,9 +6,9 @@ parse_git_branch() {
 
 # setaf 1-red 2-green 3-yellow 4-blue 5-purple 6-liteblue
 MAIN_PROMPT=$'shalashashka? '
-FIRST_LINE=2
-GIT_BRANCH=2
-PROMT=2
+FIRST_LINE=7
+GIT_BRANCH=7
+PROMT=7
 OUTPUT=2
 export PS1="\[$(tput setaf $FIRST_LINE)\][ \u@\h | \w ] \[$(tput setaf $GIT_BRANCH)\]\$(parse_git_branch)\n\[$(tput setaf $PROMT)\]$MAIN_PROMPT\[$(tput setaf $OUTPUT)\]"
 
