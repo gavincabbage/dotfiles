@@ -13,3 +13,5 @@ unset SSH_ASKPASS
 export GOROOT=$HOME/Development/go
 export GOPATH=$HOME
 export PATH=$PATH:$GOROOT/bin
+
+alias ls="ls --color"
