@@ -10,13 +10,22 @@ export PS1="\[$(tput setaf 6)\][ \u@\h | \w ] \[$(tput setaf 3)\]\$(parse_git_br
 
 unset SSH_ASKPASS
 
-# Go Install
-export GOROOT=${HOME}/Development/go
-export GOPATH=${HOME}
-export PATH=${PATH}:${GOROOT}/bin
-
 export DEVDIR="${HOME}/Documents/Development"
+
+# Golang
+export GOPATH="${DEVDIR}/go"
 
 # Dank Aliases
 alias ls="ls --color"
 alias dev="cd ${DEVDIR}"
+
+# Copy and push bashrc updtes
+function push_bashrc {
+	cd ${DEVDIR}/dotfiles
+	cp ~/.bashrc ./tassadar/.bashrc
+	git add . -A
+	git status
+	git commit -m "updated tassadar bashrc on `date +%D`"
+	git push
+}
+
