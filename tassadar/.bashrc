@@ -10,10 +10,12 @@ export PS1="\[$(tput setaf 6)\][ \u@\h | \w ] \[$(tput setaf 3)\]\$(parse_git_br
 
 unset SSH_ASKPASS
 
-export DEVDIR="${HOME}/Documents/Development"
+export DEVDIR="${HOME}/Development"
 
 # Golang
+export GOROOT="/usr/local/go"
 export GOPATH="${DEVDIR}/go"
+export PATH="${PATH}:${GOROOT}/bin"
 
 # Dank Aliases
 alias ls="ls --color"
