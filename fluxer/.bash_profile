@@ -31,6 +31,9 @@ export CLICOLORS=1
 export PATH=${PATH}:/usr/local/go/bin:${HOME}/Development/bin
 export GOPATH=${HOME}/Development
 
+# GPG installed with brew
+export GPG_TTY=$(tty)
+
 # Directory aliases
 alias src="cd ${HOME}/Development/src"
 
